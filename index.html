@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viofilme - Sua Agência de Marketing para Vendas Exponenciais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        header .logo-img { /* Nova classe para a imagem da logo */
+            max-width: 200px; /* Ajuste o tamanho conforme a sua logo */
+            height: auto;
+            border: none; /* Remove qualquer borda */
+            outline: none; /* Remove qualquer contorno */
+        }
+        .hero {
+            background: linear-gradient(135deg, #000000, #637d7c); /* Gradiente de preto para cinza, como fallback */
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 400px; /* Altura ajustada para o vídeo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que o vídeo cubra toda a área */
+            z-index: 0;
+            opacity: 0.8; /* Para que o texto fique mais visível */
+        }
+        .hero .content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #FFC107; /* Amarelo vibrante */
+            color: #000000;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.4em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: #FFD54F;
+            transform: translateY(-3px);
+        }
+        .section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            color: #637d7c;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        .section p {
+            font-size: 1.1em;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        /* Box sobre empresa */
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+            flex: 1 1 calc(33% - 40px); /* Ajuste para 3 colunas */
+            min-width: 280px;
+            max-width: 350px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza conteúdo do card */
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card .icon {
+            width: 80px; /* Tamanho do ícone */
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        /* Box sobre empresa --> Título  */
+        .card h3 {
+            font-size: 1.8em;
+            color: #637d7c;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        /* Box sobre empresa --> Texto  */
+        .card p {
+            font-size: 1em;
+            color: #000000;
+            line-height: 1.7;
+            text-align: center;
+        }
+        /* Box testemunhos */
+        .testimonials {
+            background-color: #b1bebe; /* Cinza claro */
+            padding: 60px 0;
+            text-align: center;
+            color: #000000; /* Título: "O que nossos cliente dizem?" */
+        }
+        .testimonial-item {
+            background-color: #fff;
+
+
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .testimonial-item .client-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #829796;
+        }
+        /* Texto testemunhas */
+        .testimonial-item p {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #000000;
+            text-align: center;
+        }
+        .testimonial-item .author {
+            font-weight: 600;
+            color: #4f6463;
+            margin-top: 2px;
+        }
+        .form-section {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .form-section h2 {
+            margin-bottom: 30px;
+        }
+        .form-section p {
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .form-section.full-width-image {
+           width: 100%;
+           height: auto;
+           display: block;
+           margin: 0 auto 30px auto;
+           border-radius: 10px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+        /* Formulário de contato -- Nome // Empresa // Email // Telefone // Mensagem */
+        .contact-form label {
+            font-weight: 600;
+            color: #4f6463;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #000000;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        /* Botão de envio do Formulário*/
+        .contact-form button {
+            background-color: #FFC107; /* Amarelo vibrante */
+            color: #000000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .contact-form button:hover {
+            background-color: #8D0A92;
+        }
+
+        /* Estilos do Rodapé */
+        footer {
+            background-color: #222222; /* Cor de fundo escura, similar ao exemplo */
+            color: #DDDDDD; /* Cor do texto geral do rodapé */
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex; /* Habilita Flexbox */
+            justify-content: space-between; /* Espalha os itens (esquerda e direita) */
+            align-items: center; /* Alinha verticalmente no centro */
+            flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+            gap: 20px; /* Espaço entre os elementos em telas pequenas */
+        }
+
+        .footer-left p {
+            margin: 0; /* Remove margem padrão do parágrafo */
+            color: #BBBBBB; /* Cor mais suave para o texto de copyright */
+        }
+
+        .footer-left a,
+        .footer-right a {
+            color: #BBBBBB; /* Cor dos links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-left a:hover,
+        .footer-right a:hover {
+            color: #FFFFFF; /* Cor dos links ao passar o mouse */
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 30px; /* Espaço entre a seção de info e a seção social */
+            flex-wrap: wrap; /* Para responsividade */
+            justify-content: center; /* Centraliza em telas menores */
+        }
+
+        .footer-info,
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Espaço entre os links/ícones */
+            flex-wrap: wrap; /* Para responsividade */
+            justify-content: center;
+        }
+
+        .footer-link-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Espaço entre o ícone e o texto */
+            font-weight: 600; /* Deixa o texto do link mais forte */
+            color: #FFFFFF; /* Cor dos links no rodapé */
+            transition: color 0.3s ease;
+            text-decoration: none; /* Remove sublinhado dos links */
+        }
+
+        .footer-link-icon:hover {   
+            color: #FFC107; /* Cor  dos links ao passar o mouse */
+        }
+
+        /* Responsividade geral */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                flex: 1 1 90%;
+            }
+            /* Responsividade para o rodapé */
+            .footer-container {
+                flex-direction: column; /* Coloca os itens em coluna */
+                text-align: center;
+                gap: 30px; /* Aumenta o espaço entre as seções */
+            }
+
+            .footer-left p {
+                margin-bottom: 20px; /* Espaço entre o texto e os links na versão mobile */
+            }
+
+            .footer-right {
+                flex-direction: column; /* Idioma/moeda e social também em coluna */
+                gap: 20px;
+            }
+
+            .footer-social {
+                width: 100%; /* Ocupa a largura total */
+                justify-content: center; /* Centraliza os itens dentro */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="logo.svg" alt="Logo da Viofilme" class="logo-img">
+        </div>
+    </header>
+
+    <section class="hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="" type="video/mp4">
+        </video>
+        <div class="content container">
+            <h1 class="hero-title-img">
+            <p>A Viofilme é a agência de marketing que usa estratégias inovadoras e dados para transformar seus leads em clientes fiéis. Chega de achismos, comece a crescer de verdade!</p>
+            </h1>            
+            <a href="#contato" class="cta-button">Quero Alavancar Minhas Vendas Agora!</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Como a Viofilme Impulsiona o Seu Crescimento?</h2>
+            <p>Nossos serviços são desenhados para gerar resultados concretos, focando em cada etapa da jornada do seu cliente.</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="icon_clientes.png" alt="Ícone de Presença Digital" class="icon">
+                    <h3>Presença digital estratégica e consistente</h3>
+                    <p>Oferecemos gerenciamento completo das suas redes sociais, com planejamento de conteúdo, criação de posts, agendamento, publicação e monitoramento de engajamento, tudo para fortalecer sua marca online de forma estratégica.</p>
+                </div>
+                <div class="card">
+                    <img src="icon_vendas.png" alt="Ícone de Geração Leads" class="icon">
+                    <h3>Geração de leads e aumento de conversões</h3>
+                    <p>Com nossos serviços de Marketing de Performance, focamos em gestão profissional de tráfego pago para gerar leads, aumentar conversões e acelerar seus resultados de negócio.</p>
+                </div>
+                <div class="card">
+                    <img src="icon_midia.png" alt="Ícone de Mídia" class="icon">
+                    <h3>Conteúdo audiovisual de alta qualidade</h3>
+                    <p>Produzimos conteúdo audiovisual profissional, como fotos e vídeos, que elevam a imagem da sua marca e engajam seu público, sendo o nosso core de atuação.</p>
+                </div>
+            </div>
+            <div style="margin-top: 60px; text-align: center;">
+                <h3>Assista nosso vídeo explicativo:</h3>
+                <!-- Formato 16:9 | Height é definido por (9/16)*maxwidth-->
+                <video controls style="max-width: 600px; height: 337.5px; width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"> 
+                    <source src="videoVIO.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>O Que Nossos Clientes Dizem:</h2>
+            <div class="testimonial-item">
+                <img src="rosto.jpg" alt="Foto do Flávio Nunes" class="client-photo">
+                <p>"Desde que começamos com a Viofilme, nossas vendas online dispararam!"</p>
+                <div class="author">- Flávio Nunes, CEO Viofilmes</div>
+            </div>
+            <div class="testimonial-item">
+                <img src="rosto2.jpg" alt="Foto de Lewis Caroll" class="client-photo">
+                <p>"A equipe da Viofilme é fantástica! Aumentamos nosso faturamento em 40% no primeiro trimestre. Recomendo de olhos fechados!"</p>
+                <div class="author">- Lewis Caroll, CEO Alice Wonders</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section form-section" id="contato">
+        <div class="container">
+            <h2>Pronto para Ver Suas Vendas Explodirem?</h2>
+            <p>Preencha o formulário abaixo e um de nossos especialistas entrará em contato para um diagnóstico gratuito da sua empresa!</p>
+            <img src="Imagens/equipe.jpg" alt="Equipe Viofilme em reunião" style="max-width: 400px; margin-bottom: 30px; border-radius: 10px;">
+            <form class="contact-form" action="#" method="POST">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                <label for="empresa">Nome da Sua Empresa:</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Sua Empresa" required>
+
+                <label for="email">Seu Melhor E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="contato@suaempresa.com.br" required>
+
+                <label for="telefone">Telefone (com DDD):</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+                <label for="mensagem">Como podemos ajudar sua empresa a crescer?</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Fale-nos sobre seus desafios e objetivos..."></textarea>
+
+                <button type="submit">Enviar Diagnóstico Gratuito</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2025 Viofilme. Todos os direitos reservados. &middot; <a href="#">Política de Privacidade</a> &middot; <a href="#">Termos de Uso</a></p>
+            </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/viofilme/" target="_blank" rel="noopener noreferrer" class="footer-link-icon social-icon">
+                        <span class="fab fa-instagram"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/fl%C3%A1vio-nunes-240a26370/?originalSubdomain=br" target="_blank" rel="noopener noreferrer" class="footer-link-icon social-icon">
+                        <span class="fab fa-linkedin"></span>
+                    </a>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

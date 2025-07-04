@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viofilme - Sua Agência de Marketing para Vendas Exponenciais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #000000; /* Cor do texto padrão */
+            background-color: #f8f8f8; /* Cor de fundo suave */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #0000;
+        }
+        header {
+            background-color: #0f0E14; /* Cor de fundo do cabeçalho */
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        }
+        .header-container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-left{
+            margin-right: auto; /* Alinha a logo à esquerda */
+        }
+        header .logo-img { /* Nova classe para a imagem da logo */
+            max-width: 200px; /* Ajuste o tamanho conforme a sua logo */
+            height: auto;
+            border: none; /* Remove qualquer borda */
+            outline: none; /* Remove qualquer contorno */
+        }
+        .main-nav {
+            padding: 0 20px;
+        }
+        .main-nav ul {
+            list-style: none; /* Remove marcadores de lista */
+            margin: 0;
+            padding: 0  ; /* Remove espaçamento padrão */
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav ul li a{
+            text-decoration: none;
+            color: #DCD4C7; /* Cor do texto do cabeçalho */
+            font-weight: 600;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+        .main-nav ul li a:hover {
+            color: #637d7c; /* Cor do texto ao passar o mouse */
+        }
+        .cta-button.header-cta{
+            margin-left: 0; /* Limpa margens Mobile */
+            width: 100%; /* Botão ocupa toda a largura do cabeçalho */
+            max-width: 250px; /* Limita a largura máxima do botão */
+        }
+        .hero {
+            background: #DCD4C7;
+            color: #0f0E14; /* Cor do texto no herói */
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 400px; /* Altura ajustada para o vídeo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero .cta-clarification {
+            font-size: 0.9em;
+            margin-top: 15px;
+            color: #0f0E14; /* Cor do texto de esclarecimento */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .hero .subheadline-hero {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #0f0E14; /* Cor do subtítulo */
+        }
+        .hero .content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #0f0E14; /* Cor do texto*/
+
+        }
+        /* Estilos para a seção "Como Funciona" */
+        .how-it-works-section {
+            background-color: #fff; /* Bege */
+            padding: 80px 0;
+        }
+
+        .how-it-works-section h2 {
+            color: #637d7c; /* Cor do título */
+            margin-bottom: 20px;
+        }
+
+        .how-it-works-section p {
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto 50px auto; /* Aumenta o espaço abaixo do parágrafo introdutório */
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px; /* Espaço entre os passos */
+            margin-top: 40px;
+        }
+
+        .step-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            flex: 1 1 calc(50% - 20px); /* Para 2 colunas */
+            min-width: 300px;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .step-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: #FFC107; /* Cor amarela para o número */
+            color: #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: 700;
+            margin: 0 auto 25px auto; /* Centraliza e adiciona espaço abaixo */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .step-item h3 {
+            font-size: 1.5em;
+            color: #637d7c;
+            margin-bottom: 15px;
+        }
+
+        .step-item p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.6;
+            margin: 0; /* Remove margem extra */
+        }
+        
+        /* Seção "Educação" */
+        .educational-section {
+        background-color: #0f0E14; /* Azul escuro */
+        padding: 80px 0;
+        color: #333;
+        }
+        .educational-section h2 {
+        color: #637d7c; /* Cor do título, similar aos outros h2 */
+        margin-bottom: 20px;
+        }
+        .educational-section .section-description {
+        color: #555;
+        max-width: 900px;
+        margin: 0 auto 50px auto;
+        }
+        .educational-points {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        }
+        .edu-point-item {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        padding: 30px;
+        flex: 1 1 calc(50% - 40px); /* Dois itens por linha em telas maiores */
+        min-width: 300px;
+        max-width: 550px;
+        text-align: left;
+        transition: transform 0.3s ease;
+        }
+        .edu-point-item:hover {
+        transform: translateY(-10px);
+        }
+        .edu-point-item h3 {
+        font-size: 1.6em;
+        color: #637d7c;
+        margin-bottom: 10px;
+        text-align: center;
+        }
+        .edu-point-item p {
+        font-size: 0.95em;
+        color: #555;
+        line-height: 1.6;
+        text-align: center;
+        }
+        /* CTA secundário nesta seção */
+        .educational-section .secondary-cta {
+            margin-top: 60px; /* Espaço acima do botão secundário */
+        }
+
+        /* Seção "Por Que Escolher a Viofilme?" */
+        .why-choose-us-section {
+            background-color: #DCD4C7; /* Bege */
+            padding: 80px 0;
+            color: #0f0E14; /* Cor do texto */
+        }
+        .why-choose-us-section h2 {
+            color: #0f0E14; /* Cor do título */
+            margin-bottom: 20px;
+        }
+        .why-choose-us-section .section-description {
+            color: #0f0E14;
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+        }
+        .why-choose-us-points {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .why-choose-us-points .point-item {
+            background-color: #0f0E14; /* Azul escuro */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+            flex: 1 1 calc(50% - 40px); /* Dois itens por linha em telas maiores */
+            min-width: 300px;
+            max-width: 550px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        .why-choose-us-points .point-item:hover {
+            transform: translateY(-10px);
+        }
+        .why-choose-us-points .point-item h3 {
+            font-size: 1.6em;
+            color: #DCD4C7; /* Cor do título */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .why-choose-us-points .point-item p {
+            font-size: 0.95em;
+            color: #fff;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .emotional-appeal-box h3 {
+            color: #DCD4C7 !important;
+        }
+        .emotional-appeal-box p {
+            color: #DCD4C7 !important;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        /* CTA secundário */
+        .secondary-cta {
+            margin-top: 60px; /* Espaço acima do botão secundário */
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #FFC107; /* Amarelo vibrante */
+            color: #000000;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: #FFD54F;
+            transform: translateY(-3px);
+        }
+        
+        /* Seção "Antes e Depois" */
+        .before-after-section {
+        background-color: #f8f8f8; /* Fundo claro, pode alternar com cinza se quiser */
+        padding: 80px 0;
+        color: #333;
+        }
+        .before-after-section h2 {
+        color: #637d7c; /* Cor do título */
+        margin-bottom: 20px;
+        }
+        .before-after-section .section-description {
+        color: #555;
+        max-width: 900px;
+        margin: 0 auto 50px auto;
+        }
+        .comparison-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px; /* Espaço entre as colunas */
+        margin-top: 40px;
+        }
+        .comparison-column {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        padding: 30px;
+        flex: 1 1 calc(50% - 40px); /* Duas colunas em telas maiores */
+        min-width: 300px;
+        max-width: 500px;
+        text-align: left; /* Texto alinhado à esquerda dentro da coluna */
+        }
+        .comparison-column h3 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid; /* Linha de separação */
+        text-align: center;
+        }
+        .before-column h3 {
+        color: #e74c3c; /* Cor para "Antes" (vermelho/laranja de atenção) */
+        border-color: #e74c3c;
+        }
+        .after-column h3 {
+        color: #27ae60; /* Cor para "Depois" (verde de sucesso) */
+        border-color: #27ae60;
+        }
+        .comparison-column ul {
+        list-style: none; /* Remove marcadores de lista padrão */
+        padding: 0;
+        margin: 0;
+        }
+        .comparison-column li {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.5;
+        position: relative;
+        padding-left: 30px; /* Espaço para o ícone */
+        }
+        /* Ícones para as listas */
+        .before-column li:before {
+        content: "\2716"; /* Ícone de "X" (U+2716 Heavy Multiplication X) */
+        color: #e74c3c;
+        font-size: 1.2em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        }
+        .after-column li:before {
+        content: "\2714"; /* Ícone de "tick" (U+2714 Heavy Check Mark) */
+        color: #27ae60;
+        font-size: 1.2em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        }
+        /* CTA secundário nesta seção */
+        .before-after-section .secondary-cta {
+        margin-top: 60px; /* Espaço acima do botão secundário */
+        }
+        .section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #0f0E14; /* Azul escuro */
+        }
+        .section h2 {
+            font-size: 2.5em;
+            color: #DCD4C7;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        .section h3{
+            font-size: 1.8em;
+            color: #DCD4C7; /* Cor do subtítulo */
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .section p {
+            font-size: 1.1em;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            color: #DCD4C7; /* Cor do texto */
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        /* Seção "Portfólio em Miniaturas" */
+        .portfolio-section {
+            background-color: #f0f0f0; /* Um fundo claro para diferenciar */
+            padding: 80px 0;
+            color: #333;
+        }
+        .portfolio-section h2 {
+            color: #637d7c; /* Cor do título */
+            margin-bottom: 20px;
+        }
+        .portfolio-section .section-description {
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+        }
+        .portfolio-grid {
+            display: grid; /* Usamos Grid para o layout das miniaturas */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 colunas responsivas */
+            gap: 30px; /* Espaço entre os itens do portfólio */
+            margin-top: 40px;
+        }
+        .portfolio-item {
+            position: relative; /* Para posicionar o overlay */
+            overflow: hidden; /* Garante que o overlay fique dentro do item */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .portfolio-thumbnail {
+            width: 100%;
+            height: 200px; /* Altura fixa para as miniaturas (ajuste se precisar) */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer, cortando se necessário */
+            display: block;
+            border-radius: 10px; /* Borda arredondada também na imagem */
+        }
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(99, 125, 124, 0.85); /* Cor de fundo do overlay (verde-azulado com transparência) */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0; /* Começa invisível */
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1; /* Fica visível no hover */
+        }
+        .portfolio-overlay h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .portfolio-overlay p {
+            font-size: 0.9em;
+            color: #eee;
+            margin: 0;
+        }
+        /* CTA secundário nesta seção */
+        .portfolio-section .secondary-cta {
+            margin-top: 60px; /* Espaço acima do botão secundário */
+        }        
+
+        /* Box sobre empresa */
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+            flex: 1 1 calc(33% - 40px); /* Ajuste para 3 colunas */
+            min-width: 280px;
+            max-width: 350px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza conteúdo do card */
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card .icon {
+            width: 80px; /* Tamanho do ícone */
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        /* Seção "Humanização Adicional" */
+        .humanization-section {
+            background-color: #b1bebe; /* Um fundo levemente diferente para destacar */
+            padding: 80px 0;
+            color: #333;
+        }
+        .humanization-section h2 {
+            color: #4f6463; /* Cor do título */
+            margin-bottom: 20px;
+        }
+        .humanization-section .section-description {
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+        }
+        .humanization-gallery {
+            display: grid; /* Usamos Grid para a galeria */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+            gap: 30px; /* Espaço entre as imagens */
+            margin-top: 40px;
+            max-width: 1000px; /* Limita a largura máxima da galeria */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden; /* Garante que a imagem e caption fiquem dentro do item */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .gallery-image {
+            width: 100%;
+            height: 220px; /* Altura fixa para as imagens da galeria (ajuste conforme necessário) */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            display: block;
+        }
+        .image-caption {
+            padding: 15px;
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+            background-color: #fefefe;
+            border-top: 1px solid #eee;
+        }
+        /* CTA secundário nesta seção */
+        .humanization-section .secondary-cta {
+            margin-top: 60px;
+        }    
+        /* Seção "Perguntas Frequentes (FAQ)" */
+        .faq-section {
+            background-color: #f8f8f8; /* Fundo claro, similar a outras seções */
+            padding: 80px 0;
+            color: #333;
+        }
+        .faq-section h2 {
+            color: #637d7c;
+            margin-bottom: 20px;
+        }
+        .faq-section .section-description {
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+        }
+        .faq-items {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden; /* Garante que o conteúdo animado não "vaze" */
+        }
+        .faq-question {
+            display: block; /* Para que o cursor mude e o padding funcione */
+            padding: 20px;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #4f6463; /* Cor da pergunta */
+            cursor: pointer;
+            position: relative;
+            user-select: none; /* Impede seleção de texto ao clicar */
+        }
+        .faq-question::after {
+            content: '\25BC'; /* Seta para baixo (▼) */
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg); /* Centraliza e sem rotação inicial */
+            transition: transform 0.3s ease;
+        }
+        /* Gira a seta quando a FAQ é aberta */
+        .faq-item[open] .faq-question::after {
+            transform: translateY(-50%) rotate(180deg); /* Gira para cima */
+        }
+        .faq-answer {
+            padding: 0 20px 20px 20px; /* Padding apenas na base e laterais */
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            /* Adicione uma transição para um "abrir/fechar" mais suave (requer JS para transição de altura, mas CSS básico já ajuda) */
+            /* max-height: 0; */
+            /* overflow: hidden; */
+            /* transition: max-height 0.3s ease-out; */
+        }
+        /* Se quiser uma transição suave de altura para faq-answer (necessita JS para altura dinâmica ou height max muito alta) */
+        /* .faq-item[open] .faq-answer {
+            max-height: 500px; Ajuste para ser maior que o conteúdo máximo
+        } */
+        /* CTA secundário nesta seção */
+        .faq-section .secondary-cta {
+            margin-top: 60px;
+        }
+
+        /* Box sobre empresa --> Título  */
+        .card h3 {
+            font-size: 1.8em;
+            color: #637d7c;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        /* Box sobre empresa --> Texto  */
+        .card p {
+            font-size: 1em;
+            color: #000000;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        /* Box testemunhos */
+        .testimonials {
+            background-color: #b1bebe; /* Cinza claro */
+            padding: 60px 0;
+            text-align: center;
+            color: #000000; /* Título: "O que nossos cliente dizem?" */
+        }
+        .testimonial-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .testimonial-item .client-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #829796;
+        }
+        
+        /* Texto testemunhas */
+        .testimonial-item p {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #000000;
+            text-align: center;
+        }
+        .testimonial-item p strong {
+            font-weight: 700;
+            color: #FFC107; /* Destacar os números */
+        }
+        .testimonial-item .author {
+            font-weight: 600;
+            color: #4f6463;
+            margin-top: 2px;
+        }
+        .testimonials h2{
+            font-size: 2.8em;
+            color: #637d7c; /* Cor do título */
+            margin-bottom: 20px; 
+            font-weight: 700;
+        }
+        .testimonials-subtitle{
+            font-size: 1.8em;
+            color: #4f6463; /* Cor do subtítulo */
+            margin-top: 50px;
+            margin-bottom: 40px; 
+            font-weight: 600;
+        }
+        /* Seção de Logos de Clientes */
+        .client-logos-section{
+            margin-bottom: 50px;
+        }
+        .attended-companies {
+        font-size: 1.2em;
+        color: #4f6463; /* Cor para o texto "+ de X empresas" */
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-align: center;
+        }
+        .client-logos-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; /* Espaço entre os logos */
+        max-width: 900px;
+        margin: 0 auto;
+        }
+        .client-logo {
+        max-width: 120px; /* Tamanho máximo do logo do cliente */
+        height: auto;
+        opacity: 0.7; /* Suaviza o logo para não competir com o texto */
+        filter: grayscale(100%); /* Deixa o logo em preto e branco para consistência visual */
+        transition: opacity 0.3s ease, filter 0.3s ease;
+        }
+        .client-logo:hover {
+        opacity: 1; /* Retorna a cor original no hover */
+        filter: grayscale(0%); /* Remove o efeito preto e branco no hover */
+        }
+
+        /* Seção de Formulário de Contato */
+        .form-section {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-section h2 {
+            margin-bottom: 30px;
+        }
+        .form-section p {
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .form-section.full-width-image {
+           width: 80%;
+           height: auto;
+           display: block;
+           margin-bottom: 30px;
+           border-radius: 10px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+
+        /* Seção "Detalhes do Diagnóstico Gratuito" */
+        .diagnosis-details {
+            background-color: #f0f0f0; /* Fundo suave para o bloco de detalhes */
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px auto; /* Espaçamento acima e abaixo, centralizado */
+            max-width: 700px; /* Limita a largura para melhor leitura */
+            text-align: left; /* Alinha o texto dentro do bloco */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .diagnosis-details h3 {
+            font-size: 1.5em;
+            color: #637d7c; /* Cor do título */
+            margin-bottom: 20px;
+            text-align: center; /* Centraliza o título dentro do bloco */
+        }
+        .diagnosis-details ul {
+            list-style: none; /* Remove marcadores de lista padrão */
+            padding: 0;
+            margin: 0;
+        }
+        .diagnosis-details ul li {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px; /* Espaço para o ícone */
+        }
+        .diagnosis-details ul li:last-child {
+            margin-bottom: 0; /* Remove margem do último item da lista */
+        }
+        /* Ícone de "check" para cada item da lista */
+        .diagnosis-details ul li:before {
+            content: "\2713"; /* Caractere de checkmark (✓) */
+            color: #27ae60; /* Verde de sucesso */
+            font-size: 1.2em;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Formulário de contato -- Nome // Empresa // Email // Telefone // Mensagem */
+        .contact-form label {
+            font-weight: 600;
+            color: #4f6463;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #000000;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* Botão de envio do Formulário*/
+        .contact-form button {
+            background-color: #FFC107; /* Amarelo vibrante */
+            color: #000000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .contact-form button:hover {
+            background-color: #FFD54F; /* Amarelo mais claro ao passar o mouse */
+        }
+
+        /* Estilos do Rodapé */
+        footer {
+            background-color: #0f0E14; /* Cor de fundo escura */
+            color: #DCD4C7; /* Cor do texto geral do rodapé */
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex; /* Habilita Flexbox */
+            justify-content: space-between; /* Espalha os itens (esquerda e direita) */
+            align-items: center; /* Alinha verticalmente no centro */
+            flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+            gap: 20px; /* Espaço entre os elementos em telas pequenas */
+        }
+        /* 2025 Todos os direitos reservados */
+        .footer-left p {
+            margin: 0; /* Remove margem padrão do parágrafo */
+            color: #DCD4C7; /* Cor padrão texto */
+        }
+
+        .footer-left a,
+        .footer-right a {
+            color: #DCD4C7; /* Cor dos links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-left a:hover,
+        .footer-right a:hover {
+            color: #FFD54F; /* Cor dos links ao passar o mouse */
+            text-decoration: none;
+        }
+        /* Política Privacidade - Termos de Serviço */
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 30px; /* Espaço entre a seção de info e a seção social */
+            flex-wrap: wrap; /* Para responsividade */
+            justify-content: center; /* Centraliza em telas menores */
+        }
+
+        .footer-info,
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Espaço entre os links/ícones */
+            flex-wrap: wrap; /* Para responsividade */
+            justify-content: center;
+            text-decoration: none; /* Remove sublinhado dos links */
+        }
+
+        .footer-link-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Espaço entre o ícone e o texto */
+            font-weight: 500; /* Deixa o texto do link mais forte */
+            color: #DCD4C7; /* Cor dos links no rodapé */
+            transition: color 0.3s ease;
+            text-decoration: none; /* Remove sublinhado dos links */
+        }
+
+        .footer-social .footer-link-icon .fab {
+            color: #DCD4C7  /* Cor dos ícones sociais */
+        }
+        .footer-social .footer-link-icon.social-icon:hover .fa-instagram {
+            color: #c13584; /* Cor do ícone do Instagram ao passar o mouse */
+        }
+        .footer-social .footer-link-icon.social-icon:hover .fa-linkedin {
+            color: #0077b5; /* Cor do ícone do LinkedIn ao passar o mouse */
+        }
+        /* Responsividade geral */
+        @media (max-width: 768px) {
+            header .logo-img {
+            max-width: 120px; /* Reduza um pouco para mobile, se 200px ficar muito grande */
+            }
+            .header-container {
+            flex-direction: column; /* Coloca os itens em coluna */
+            gap: 15px;
+            padding: 10px 20px; /* Espaçamento interno reduzido */
+            }     
+            .header-left{
+                margin-right: 0; /* Remove margem direita para centralizar logo */
+            }  
+            .main-nav{
+                margin: 0; /* Remove margem para centralizar o menu */
+                width: 120%;
+                text-align: center; /* Centraliza o menu */
+            }
+            .main-nav ul {
+                flex-wrap: wrap; /* Permite que os itens do menu quebrem linha */
+                justify-content: center; /* Centraliza os itens do menu */
+                gap: 15px; /* Espaço entre os itens do menu */
+            }
+
+            .diagnosis-details{
+                padding: 20px;
+                margin: 30px 20px; /* Espaçamento reduzido em telas menores */
+            }
+            .diagnosis-details h3{
+                font-size: 1.3em;
+            }
+            .diagnosis-details ul li {
+                font-size: 0.95em; /* Reduz o tamanho da fonte para melhor legibilidade */
+            }
+            .faq-question{
+                padding: 0 15px 15px 15px;
+            }
+            .faq-answer {
+                font-size: 0.95em;
+                padding: 15px;
+            }
+            .humanization-gallery {
+                grid-template-columns: 1fr; /* Colunas responsivas */
+                gap: 20px; /* Espaço entre as imagens */
+            }
+            .gallery-item {    /* Pode colocar em Auto */
+                height: 200px; /* Altura fixa para as imagens da galeria */
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr; /* 1 coluna em Mobile */
+                gap: 20px;
+            }
+            .portfolio-thumbnail {
+                height: 250px; /* Ajusta a altura das miniaturas para telas menores */
+            }
+            .comparison-grid{
+                flex-direction: column; /* Coloca as colunas em coluna */
+                align-items: center; /* Centraliza os itens */
+            }
+            .comparison-column {
+                flex: 1 1 90%; /* Largura maior para melhor visualização Mobile */
+                max-width: 90%; /* Limita a largura máxima */
+            }
+            .client-logos-grid{
+                gap: 20px; /* Reduz o espaço entre os logos */
+            }
+            .client-logo {
+                max-width: 80px; /* Reduz o tamanho máximo dos logos */
+            }
+            .attended-companies{
+                font-size: 1em;
+            }
+            .testimonials-subtitle{
+                font-size: 1.5em;
+            }
+            .educational-points {
+                flex-direction: column; /* Coloca os pontos em coluna */
+                align-items: center; /* Centraliza os itens */
+            }
+            .edu-point-item {
+                flex: 1 1 90%; /* Largura maior para melhor visualização Mobile */
+                max-width: 90%; /* Limita a largura máxima */
+            }
+            .why-choose-us-points .point-item {
+                flex: 1 1 90%; /* Ajusta para mobile */
+                max-width: 90%; /* Limita a largura máxima */
+            }
+            .emotional-appeal-box {
+                flex: 1 1 90%; /* Ocupa a largura total em telas pequenas */
+                max-width: 90%;
+            }    .process-steps {
+                flex-direction: column; /* Coloca os passos em coluna */
+                align-items: center; /* Centraliza os itens */
+            }
+            .step-item {
+                width: 1 1 90%; /* Largura maior para melhor visualização Mobile */
+                margin-bottom: 20px; /* Espaço entre os passos */
+                max-width: 90%; /* Limita a largura máxima */
+                text-align: center; /* Centraliza o texto dos passos */
+            }
+            .hero{
+                padding: 60x 20px;
+                min-height: 350px;
+            }
+            .hero-container {
+                flex-direction: column; /* Coloca os itens em coluna */
+                gap: 15px;
+                padding: 10px 20px; /* Espaçamento interno reduzido */
+            }
+            .hero .subheadline-hero {
+                font-size: 0.95em;
+                margin-bottom: 15px;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                flex: 1 1 90%;
+            }
+            /* Responsividade para o rodapé */
+            .footer-container {
+                flex-direction: column; /* Coloca os itens em coluna */
+                text-align: center;
+                gap: 30px; /* Aumenta o espaço entre as seções */
+            }
+
+            .footer-left p {
+                margin-bottom: 20px; /* Espaço entre o texto e os links na versão mobile */
+            }
+
+            .footer-right {
+                flex-direction: column; /* Idioma/moeda e social também em coluna */
+                gap: 20px;
+            }
+
+            .footer-social {
+                width: 100%; /* Ocupa a largura total */
+                justify-content: center; /* Centraliza os itens dentro */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header | Cabeçalho -->
+    <header>
+    <div class="header-container"> 
+        <div class="header-left">
+            <img src="Imagens/logo49.png" alt="Logo da Viofilme" class="logo-img">
+        </div>            
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+            
+        <a href="#contato" class="cta-button header-cta">Fale Conosco!</a>
+    </div>
+</header>
+
+    <section class="hero">                 
+       <!-- <video autoplay loop muted playsinline class="background-video">
+            <source src="" type="video/mp4">
+        </video>
+        -->
+        <div class="content container">
+            <h1 class="hero-title-img"></h1>
+            <p class="subheadline-hero">Soluções digitais estratégicas para atrair, engajar e converter mais clientes online.</p>
+            <p>A Viofilme é a agência de marketing que usa estratégias inovadoras e dados para transformar seus leads em clientes fiéis. Chega de achismos, comece a crescer de verdade!</p>            
+            <a href="#contato" class="cta-button">Quero Alavancar Minhas Vendas Agora!</a>
+            <p class="cta-clarification">Você será direcionado para um diagnóstico gratuito via WhatsApp.</p>
+        </div>
+    </section>
+
+    <!-- Seção "Como a Viofilme Impulsiona o Seu Crescimento?" -->
+    <section class="section">
+        <div class="container">
+            <h2>Como a Viofilme Impulsiona o Seu Crescimento?</h2>
+            <p>Nossos serviços são desenhados para impulsionar suas vendas e garantir um crescimento real, focando em cada etapa da jornada do seu cliente.</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="icon_clientes.png" alt="Ícone de Presença Digital" class="icon">
+                    <h3>Presença digital estratégica e consistente</h3>
+                    <p>Oferecemos gerenciamento completo das suas redes sociais, com planejamento de conteúdo, criação de posts, agendamento, publicação e monitoramento de engajamento, tudo para fortalecer sua marca online de forma estratégica.</p>
+                </div>
+                <div class="card">
+                    <img src="icon_vendas.png" alt="Ícone de Geração Leads" class="icon">
+                    <h3>Geração de leads e aumento de conversões</h3>
+                    <p>Com nossos serviços de Marketing de Performance, focamos em gestão profissional de tráfego pago para gerar leads, aumentar conversões e acelerar seus resultados de negócio.</p>
+                </div>
+                <div class="card">
+                    <img src="icon_midia.png" alt="Ícone de Mídia" class="icon">
+                    <h3>Conteúdo audiovisual de alta qualidade</h3>
+                    <p>Produzimos conteúdo audiovisual profissional, como fotos e vídeos, que elevam a imagem da sua marca e engajam seu público, sendo o nosso core de atuação.</p>
+                </div>
+            </div>
+            <div style="margin-top: 60px; text-align: center;">
+                <h3>Assista nosso vídeo explicativo:</h3>
+                <!-- Formato 16:9 | Height é definido por (9/16)*maxwidth-->
+                <video controls style="max-width: 600px; height: 337.5px; width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"> 
+                    <source src="videoVIO.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Como Funciona" -->
+    <section class="section how-it-works-section">
+    <div class="container">
+        <h2>Nosso Processo: Simples e Eficaz.</h2>
+        <p>Descubra o processo Viofilme que garante vídeos profissionais e um funil de vendas ativo, transformando seus objetivos em resultados concretos, passo a passo.</p>
+        <div class="process-steps">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h3>Diagnóstico Gratuito</h3> 
+                <p>Analisamos sua presença digital e identificamos as oportunidades para alavancar suas vendas.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h3>Produção Audiovisual de Impacto</h3> 
+                <p>Criamos vídeos e fotos profissionais que captam a atenção e contam a história da sua marca.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h3>Lançamento Estratégico com Tráfego Pago</h3> 
+                <p>Suas campanhas são otimizadas para alcançar o público certo e gerar leads qualificados.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h3>Resultados e Otimizações Contínuas</h3> 
+                <p>Monitoramos o desempenho, analisamos dados e ajustamos as estratégias para maximizar seu ROI.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção "Educação" -->
+<section class="section educational-section">
+    <div class="container">
+        <h2>O Poder Inegável do Conteúdo Visual para Suas Vendas.</h2>
+        <p class="section-description">Sua marca merece conteúdo que converte! Em um mundo digital saturado, capturar e manter a atenção do seu cliente é o maior desafio. Descubra por que o conteúdo audiovisual da Viofilme é a chave para **impulsionar suas vendas** e transformar espectadores em compradores fiéis.</p>
+        
+        <div class="educational-points">
+            <div class="edu-point-item">
+                <h3>Vídeos Vendem Mais: Por Quê?</h3>
+                <p>Vídeos capturam a atenção instantaneamente, constroem autoridade de marca e despertam desejo de forma única. Não é apenas sobre mostrar seu produto, é sobre criar uma conexão emocional que leva à conversão. Simples assim.</p>
+            </div>
+            <div class="edu-point-item">
+                <h3>Transforme o Engajamento em Lucro.</h3>
+                <p>Um conteúdo visual de qualidade não só engaja, mas também direciona o cliente pela jornada de compra. Desde o primeiro contato até a finalização da venda, vídeos e imagens estratégicas são a força propulsora que sua empresa precisa para escalar resultados.</p>
+            </div>
+        </div>
+        <a href="#contato" class="cta-button secondary-cta">Entenda Como Podemos Alavancar Suas Vendas!</a>
+    </div>
+</section>
+
+<!-- Seção "Por Que Escolher a Viofilme?" -->
+<section class="section why-choose-us-section">
+    <div class="container">
+        <h2>Por Que a Viofilme é a Escolha Certa Para Sua Empresa?</h2>
+        <p class="section-description">Em um mercado cheio de opções, a Viofilme se destaca por entregar resultados reais e a tranquilidade que sua marca merece. Não vendemos apenas serviços, entregamos a transformação que você busca.</p>
+        
+        <div class="why-choose-us-points">
+            <div class="point-item">
+                <h3>Resultados Comprovados e Crescimento Real</h3>
+                <p>Nosso foco vai além de métricas de vaidade. Geramos leads qualificados e convertemos visualizações em vendas reais, impulsionando o faturamento da sua empresa com estratégias baseadas em dados.</p>
+            </div>
+            <div class="point-item">
+                <h3>Conteúdo de Alta Qualidade Que Conecta</h3>
+                <p>Somos especialistas em produção audiovisual. Criamos vídeos e fotos profissionais que captam a essência da sua marca, engajam seu público e geram um impacto visual memorável, fazendo sua empresa se destacar da concorrência.</p>
+            </div>
+            <div class="point-item">
+                <h3>Parceria e Tranquilidade no Processo</h3>
+                <p>Nossa equipe trabalha lado a lado com você, oferecendo comunicação clara e suporte constante. Sinta a segurança de ter especialistas cuidando da sua presença digital, permitindo que você se concentre no seu core business.</p>
+            </div>
+            <div class="point-item emotional-appeal-box">
+                <h3>A Sensação de Ver Sua Marca Voar.</h3>
+                <p>Imagine ver suas vendas subirem e finalmente ter conteúdo com cara de marca grande. Essa é a sensação de trabalhar com a VioFilme.  Chega de preocupações, sinta o alívio  e a segurança  de um parceiro que realmente entrega.</p>
+            </div>
+        </div>
+        
+        <a href="#contato" class="cta-button secondary-cta">Quero Minha Empresa no Próximo Nível!</a>
+    </div>
+</section>
+<!-- Seção "Antes e Depois" -->
+<section class="section before-after-section">
+    <div class="container">
+        <h2>Sua Empresa Antes e Depois da Viofilme.</h2>
+        <p class="section-description">Veja a transformação real que nossos serviços de marketing digital e produção audiovisual podem trazer para o seu negócio.</p>
+
+        <div class="comparison-grid">
+            <div class="comparison-column before-column">
+                <h3>Antes da Viofilme</h3>
+                <ul>
+                    <li>Vídeos amadores que não engajam </li>
+                    <li>Redes sociais paradas </li>
+                    <li>Baixa geração de leads </li>
+                    <li>Marketing sem resultados claros</li>
+                    <li>Presença online esquecível</li>
+                </ul>
+            </div>
+            <div class="comparison-column after-column">
+                <h3>Depois da Viofilme</h3>
+                <ul>
+                    <li>Vídeos que captam atenção e geram conversão </li>
+                    <li>Conteúdo constante e estratégico nas redes sociais </li>
+                    <li>Funil ativo com leads entrando diariamente </li>
+                    <li>Marketing com ROI comprovado</li>
+                    <li>Marca forte e memorável online</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#contato" class="cta-button secondary-cta">Quero a Transformação para Minha Empresa!</a>
+    </div>
+</section>
+<!-- Seção de Portfólio -->
+<section class="section portfolio-section">
+    <div class="container">
+        <h2>Nosso Portfólio: Casos de Sucesso em Imagens.</h2>
+        <p class="section-description">Explore nosso portfólio e veja como impulsionamos vendas e elevamos marcas com vídeos profissionais e estratégias de marketing digital comprovadas.</p>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="img/portfolio-thumb-1.jpg" alt="Miniatura de Projeto 1" class="portfolio-thumbnail">
+                <div class="portfolio-overlay">
+                    <h3>Campanha de Lançamento X</h3>
+                    <p>Produção de vídeo e tráfego pago para e-commerce.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/portfolio-thumb-2.jpg" alt="Miniatura de Projeto 2" class="portfolio-thumbnail">
+                <div class="portfolio-overlay">
+                    <h3>Conteúdo para Redes Sociais Y</h3>
+                    <p>Estratégia e criação de posts para Instagram e Facebook.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/portfolio-thumb-3.jpg" alt="Miniatura de Projeto 3" class="portfolio-thumbnail">
+                <div class="portfolio-overlay">
+                    <h3>Vídeo Institucional Z</h3>
+                    <p>Produção de vídeo institucional para branding e vendas.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/portfolio-thumb-4.jpg" alt="Miniatura de Projeto 4" class="portfolio-thumbnail">
+                <div class="portfolio-overlay">
+                    <h3>Fotografia de Produtos A</h3>
+                    <p>Sessão fotográfica profissional para catálogo online.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/portfolio-thumb-5.jpg" alt="Miniatura de Projeto 5" class="portfolio-thumbnail">
+                <div class="portfolio-overlay">
+                    <h3>Gestão de Anúncios B</h3>
+                    <p>Otimização de campanhas no Google Ads e Meta Ads.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="img/portfolio-thumb-6.jpg" alt="Miniatura de Projeto 6" class="portfolio-thumbnail">
+                <div class="portfolio-overlay">
+                    <h3>Marketing de Conteúdo C</h3>
+                    <p>Criação de artigos e vídeos para blog e YouTube.</p>
+                </div>
+            </div>
+            </div>
+
+        <a href="#contato" class="cta-button secondary-cta">Transforme sua Marca Conosco!</a>
+    </div>
+</section>
+<!-- Seção de Humanização -->
+<section class="section humanization-section">
+    <div class="container">
+        <h2>Conheça a Viofilme Por Trás das Câmeras.</h2>
+        <p class="section-description">Nossa paixão e dedicação se traduzem em resultados que transformam. Veja um pouco da nossa equipe em ação, criando a magia que impulsiona a sua marca.</p>
+
+        <div class="humanization-gallery">
+            <div class="gallery-item">
+                <img src="img/bastidor-1.jpg" alt="Equipe Viofilme em Set de Gravação" class="gallery-image">
+                <div class="image-caption">Criando a próxima grande história.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/bastidor-2.jpg" alt="Edição de Vídeo na Viofilme" class="gallery-image">
+                <div class="image-caption">Edição minuciosa para resultados impecáveis.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/bastidor-3.jpg" alt="Reunião Estratégica de Marketing" class="gallery-image">
+                <div class="image-caption">Estratégias que geram conversão.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/bastidor-4.jpg" alt="Foto de Resultado de Campanha" class="gallery-image">
+                <div class="image-caption">Resultados que você verá no seu negócio.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/bastidor-5.jpg" alt="Foto de Resultado de Campanha" class="gallery-image">
+                <div class="image-caption">Resultados que você verá no seu negócio.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/bastidor-6.jpg" alt="Foto de Resultado de Campanha" class="gallery-image">
+                <div class="image-caption">Resultados que você verá no seu negócio.</div>
+            </div>
+            </div>
+
+        <a href="#contato" class="cta-button secondary-cta">Fale com Nossa Equipe Agora!</a>
+    </div>
+</section>
+<!-- Seção de Perguntas Frequentes (FAQ) -->
+<section class="section faq-section">
+    <div class="container">
+        <h2>Perguntas Frequentes</h2>
+        <p class="section-description">Esclareça suas dúvidas sobre nossos serviços e como podemos ajudar sua empresa a crescer.</p>
+
+        <div class="faq-items">
+            <details class="faq-item">
+                <summary class="faq-question">Quanto custa o serviço da Viofilme?</summary>
+                <div class="faq-answer">
+                    <p>O diagnóstico inicial é totalmente gratuito. [cite: 30] Nossos planos de serviço são personalizados para atender às necessidades e objetivos específicos da sua empresa. Após o diagnóstico, apresentaremos uma proposta sob medida.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Preciso de vídeo mesmo se minha empresa for pequena?</summary>
+                <div class="faq-answer">
+                    <p>Sim, definitivamente! [cite: 32] O conteúdo audiovisual é ainda mais crucial para negócios locais ou em fase de crescimento, pois ele capta a atenção, constrói autoridade e diferencia sua marca em um mercado competitivo.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Qual o prazo para entrega dos vídeos?</summary>
+                <div class="faq-answer">
+                    <p>Após a etapa de gravação e captação do material, o prazo médio para a entrega dos vídeos finalizados é de 7 a 10 dias. [cite: 34] Trabalhamos para garantir agilidade sem comprometer a qualidade.</p>
+                </div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">A Viofilme atende minha região?</summary>
+                <div class="faq-answer">
+                    <p>Sim! Somos especializados em marketing digital e produção audiovisual para empresas da Grande Vitória, incluindo Vitória, Vila Velha, Serra e Cariacica.</p>
+                </div>
+            </details>
+        </div>
+
+        <a href="#contato" class="cta-button secondary-cta">Ainda tem dúvidas? Fale Conosco!</a>
+    </div>
+</section>
+    <!-- Seção de Testemunhos -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O Que Nossos Clientes Dizem: Histórias de Sucesso.</h2>
+
+            <div class="client-logos-section">
+                <p class="attended-companies">+ de 70 Empresas Atendidas em Toda a Grande Vitória! </p>
+                <div class="client-logos-grid">
+                    <img src="img/logo-cliente1.png" alt="Logo Cliente 1" class="client-logo">
+                    <img src="img/logo-cliente2.png" alt="Logo Cliente 2" class="client-logo">
+                    <img src="img/logo-cliente3.png" alt="Logo Cliente 3" class="client-logo">
+                    <img src="img/logo-cliente4.png" alt="Logo Cliente 4" class="client-logo">
+                    <img src="img/logo-cliente5.png" alt="Logo Cliente 5" class="client-logo">
+                </div>
+            </div>
+
+            <h3 class="testimonials-subtitle">Resultados que Transformam Negócios:</h3>
+
+            <div class="testimonial-item">
+                <img src="rosto.jpg" alt="Foto do Flávio Nunes" class="client-photo">
+                <p>"Em **45 dias**, a Viofilme transformou nosso engajamento. Com 2 vídeos estratégicos e campanhas otimizadas, **aumentamos nossas vendas em 38%** e nossa base de leads em 60%!""</p>
+                <div class="author">- Flávio Nunes, CEO Viofilmes</div>
+            </div>
+            <div class="testimonial-item">
+                <img src="rosto2.jpg" alt="Foto de Lewis Caroll" class="client-photo">
+                <p>"A Viofilme é fantástica! Em **apenas 3 meses**, conseguimos posicionar nossa marca com conteúdo de alto nível e **alcançar um faturamento 40% maior**. É um investimento com retorno garantido."</p>
+                <div class="author">- Lewis Caroll, CEO Alice Wonders</div>
+            </div>
+        </div>
+    </section>
+    <!-- Seção de Contato -->
+    <section class="section form-section" id="contato">
+        <div class="container">
+            <h2>Pronto para Ver Suas Vendas Explodirem?</h2>
+            <p>Sua marca merece conteúdo que vende! Preencha o formulário abaixo e um de nossos especialistas entrará em contato para um diagnóstico gratuito da sua empresa e descobrir como impulsionar suas vendas.</p>
+            <div class="diagnosis-details">
+                <h3>Seu Diagnóstico Gratuito Inclui:</h3>
+                <ul>
+                    <li>Análise detalhada da sua presença digital atual. </li>
+                    <li>Avaliação dos seus principais pontos de conversão. </li>
+                    <li>Recomendação personalizada de conteúdo estratégico. </li>
+                    <li>Sugestão de um plano de ação em vídeo e tráfego pago. </li>
+                </ul>
+            </div>       
+            <img src="equipe.jpg" alt="Equipe Viofilme em reunião" style="max-width: 400px; margin-bottom: 30px; border-radius: 10px;">
+            <form class="contact-form" action="https://hook.us2.make.com/qsasaqm8g7fqwt3bufqp9plpxthudd3b" method="POST">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                <label for="empresa">Nome da Sua Empresa:</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Sua Empresa" required>
+
+                <label for="email">Seu Melhor E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="contato@suaempresa.com.br" required>
+
+                <label for="telefone">Telefone (com DDD):</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+                <label for="mensagem">Como podemos ajudar sua empresa a crescer?</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Fale-nos sobre seus desafios e objetivos..."></textarea>
+
+                <button type="submit">Enviar Diagnóstico Gratuito</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2025 Viofilme - Sede em Vitória/ES. Todos os direitos reservados. &middot; <a href="#">Política de Privacidade</a> &middot; <a href="#">Termos de Uso</a></p>
+            </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/viofilme/" target="_blank" rel="noopener noreferrer" class="footer-link-icon social-icon">
+                        <span class="fab fa-instagram"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/fl%C3%A1vio-nunes-240a26370/?originalSubdomain=br" target="_blank" rel="noopener noreferrer" class="footer-link-icon social-icon">
+                        <span class="fab fa-linkedin"></span>
+                    </a>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
